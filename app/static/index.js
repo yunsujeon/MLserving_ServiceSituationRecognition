@@ -136,6 +136,10 @@
 
 //jQuery 라이브러리 이용
 
+function sleep(ms) {
+  const wakeUpTime = Date.now() + ms
+  while (Date.now() < wakeUpTime) {}
+}
 
 function dragOver(e) {
     e.stopPropagation();
@@ -177,6 +181,9 @@ async function uploadFiles(e) {
             method: 'POST',
             body: formData
         });
+        console.log("waiting load image to output")
+        sleep(500)
+
         const uint8Array = (await respond.body.getReader().read()).value;
         const image = new Blob([uint8Array], {type:'image/png'});
         const url = URL.createObjectURL(image);
@@ -191,7 +198,12 @@ async function uploadFiles(e) {
     }
 }
 
-$('.content1')
+// $('.content1')
+//     .on("dragover", dragOver)
+//     .on("dragleave", dragOver)
+//     .on("drop", uploadFiles);
+
+$('#myform')
     .on("dragover", dragOver)
     .on("dragleave", dragOver)
     .on("drop", uploadFiles);

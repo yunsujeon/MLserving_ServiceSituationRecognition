@@ -22,7 +22,7 @@
 
     <link rel="stylesheet" href="../static/style.css"> <!-- 여기에 time 붙여서 계속 다른값주면 계속 업데이트 될것. 아니면 ctrl shift r 누르기-->
     <meta charset="UTF-8">
-    <title>Alphanumeric Recognition - by Imad </title>
+    <title>Situation Recognition - by yunsujeon</title>
 </head>
 
 <div class="common">
@@ -31,30 +31,44 @@
 
     <header class="sticky row">
         <div class="col-sm-12 col-md-10 col-md-offset-1">
-            <a href="#" class="logo">αnumeric</a>
-            <a href="./" class="button">App</a>
-            <a href="https://imadelhanafi.com/posts/train_deploy_ml_model/" class="button">Blog Post</a>
-            <a href="https://imadelhanafi.com" class="button" target="_blank">About</a>
+            <a href="./" class="button">Home</a>
+            <a href="https://imadelhanafi.com/posts/train_deploy_ml_model/" class="button">Flask Reference Blog</a>
+            <a href="https://github.com/aai4r/aai4r-Situation-Recognition/" class="button">Model Reference
+                Github</a>
+            <a href="https://github.com/yunsujeon/MLserving_ServiceSituationRecognition/" class="button"
+               target="_blank">This page Github</a>
         </div>
     </header>
 
     <div class="row">
         <div class="col-sm-12 col-md-10 col-md-offset-1">
             <br/>
-            <h1>Alphanumeric Recognition using PyTorch and Flask <small>deployed on Jetson Nano</small></h1>
+            <h1>Situation Recognition using PyTorch and Flask <small>deployed on Ubuntu Linux</small></h1>
+            <br>
             <p>
-                Draw an alphabet or a digit in the left box.
-                The predicition and its probability will be shown in the the right box.
+                Drag and Drop an Situation image in the left box.
+                The predicition text image will be shown in the the right box.
+            </p>
+            <p>
+                It takes a few second, because this page is demo
+            </p>
+            <br>
+            <p>
+                왼쪽 박스에 '상황에 대한' 사진을 끌어다 놓으세요.
+                예측된 결과와 정확도는 텍스로 오른쪽 박스에 나타날 것입니다.
+            </p>
+            <p>
+                모델을 직접 넣지않고 subprocess를 사용하여 속도가 빠르지 않습니다. 몇초만 기다려주세요.
             </p>
             </br>
 
-            <div class="content1">
+            {#            <div class="content1">#}
+            {#                drag and drop here#}
+            <form id="myform" action="/predict" method="POST" enctype="multipart/form-data">
                 drag and drop here
-                <form id="myform" action="/predict" method="POST"
-                      enctype="multipart/form-data">
-                    <input type="file" name="file"/>
-                </form>
-            </div>
+                <input type="file" name="file"/>
+            </form>
+            {#            </div>#}
 
             <div class="content2">
                 output image here
