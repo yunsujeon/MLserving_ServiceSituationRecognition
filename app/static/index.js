@@ -153,7 +153,7 @@ function dragOver(e) {
     }
 }
 
-function uploadFiles(e) {
+async function uploadFiles(e) {
     e.stopPropagation();
     e.preventDefault();
     dragOver(e);
@@ -173,15 +173,22 @@ function uploadFiles(e) {
         });
         const formData = new FormData(document.getElementById('myform'));
         formData.append('image', files[0]);
-        fetch('/predict', {
+        const respond = await fetch('/predict', {
             method: 'POST',
-            body:formData
-        })
+            body: formData
+        });
+        const uint8Array = (await respond.body.getReader().read()).value;
+        const image = new Blob([uint8Array], {type:'image/png'});
+        const url = URL.createObjectURL(image);
+        $('.content2').css({
+            "background-image": "url(" + url + ")",
+            "outline": "none",
+            "background-size": "100% 100%"
+        });
     } else {
         alert('이미지가 아닙니다.');
         return;
     }
-
 }
 
 $('.content1')

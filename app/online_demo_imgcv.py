@@ -145,19 +145,19 @@ resultwhite = np.ones((300,500,3),dtype=np.uint8)*255
 
 verbtext = 'verb is : {c1} / prob : {c2} %'.format(c1=verb_vocabulary[image_num], c2=round(verb_prob, 2))
 if noun_prob[i] > 95.0:
-    cv2.putText(resultwhite, verbtext, (20, 100), cv2.FONT_HERSHEY_DUPLEX, 0.8, (0, 0, 255))
+    cv2.putText(resultwhite, verbtext, (20, 100), cv2.FONT_HERSHEY_DUPLEX, 0.7, (0, 0, 255))
 else:
-    cv2.putText(resultwhite, verbtext, (20, 100), cv2.FONT_HERSHEY_DUPLEX, 0.8, (0, 0, 0))
+    cv2.putText(resultwhite, verbtext, (20, 100), cv2.FONT_HERSHEY_DUPLEX, 0.7, (0, 0, 0))
 
 cnt = 0
 for i in range(len(image_frame[0])):
     if num_output[i] != 0:
         textstr = 'role:{c1}/noun:{c2} {c3}%'.format(c1=image_frame[0][i], c2=indextonoun[num_output[i]], c3=round(noun_prob[i],2))
         print('role:', image_frame[0][i], '/ noun :', indextonoun[num_output[i]], '/ prob :', noun_prob[i])
-        cv2.putText(resultwhite, textstr, (20, 140 + (cnt * 40)), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0,0,0)) # r c 가 아닌 x y 좌표
+        cv2.putText(resultwhite, textstr, (20, 140 + (cnt * 40)), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0,0,0)) # r c 가 아닌 x y 좌표
         cnt += 1
 
 cv2.imwrite('./result.png', resultwhite)
 
 
-print('finished');
+print('finished')

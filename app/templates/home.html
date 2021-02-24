@@ -1,73 +1,78 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <!--<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140461850-1"></script> -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!--<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140461850-1"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-    gtag('config', 'UA-140461850-1');
-  </script>
-  <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v2.3.7/dist/mini-default.min.css">
-  <!--
-  Note: This is a good css too worth looking at in the future : https://cdn.rawgit.com/Chalarangelo/mini.css/v3.0.1/dist/mini-nord.min.css
-  -->
+        function gtag() {
+            dataLayer.push(arguments);
+        }
 
-  <link rel="stylesheet" href="../static/style.css"> <!-- 여기에 time 붙여서 계속 다른값주면 계속 업데이트 될것. 아니면 ctrl shift r 누르기-->
-  <meta charset="UTF-8">
-  <title>Alphanumeric Recognition -  by Imad </title>
+        gtag('js', new Date());
+
+        gtag('config', 'UA-140461850-1');
+    </script>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v2.3.7/dist/mini-default.min.css">
+    <!--
+    Note: This is a good css too worth looking at in the future : https://cdn.rawgit.com/Chalarangelo/mini.css/v3.0.1/dist/mini-nord.min.css
+    -->
+
+    <link rel="stylesheet" href="../static/style.css"> <!-- 여기에 time 붙여서 계속 다른값주면 계속 업데이트 될것. 아니면 ctrl shift r 누르기-->
+    <meta charset="UTF-8">
+    <title>Alphanumeric Recognition - by Imad </title>
 </head>
 
 <div class="common">
 
-<body>
+    <body>
 
-<header class="sticky row">
-  <div class="col-sm-12 col-md-10 col-md-offset-1">
-  <a href="#" class="logo">αnumeric</a>
-  <a href="./" class="button">App</a>
-  <a href="https://imadelhanafi.com/posts/train_deploy_ml_model/" class="button">Blog Post</a>
-  <a href="https://imadelhanafi.com" class="button" target="_blank">About</a>
-  </div>
-</header>
+    <header class="sticky row">
+        <div class="col-sm-12 col-md-10 col-md-offset-1">
+            <a href="#" class="logo">αnumeric</a>
+            <a href="./" class="button">App</a>
+            <a href="https://imadelhanafi.com/posts/train_deploy_ml_model/" class="button">Blog Post</a>
+            <a href="https://imadelhanafi.com" class="button" target="_blank">About</a>
+        </div>
+    </header>
 
-<div class="row">
-  <div class="col-sm-12 col-md-10 col-md-offset-1">
-    <br/>
-    <h1>Alphanumeric Recognition using PyTorch and Flask <small>deployed on Jetson Nano</small></h1>
-    <p>
-    Draw an alphabet or a digit in the left box.
-    The predicition and its probability will be shown in the the right box.
-    </p>
-   </br>
+    <div class="row">
+        <div class="col-sm-12 col-md-10 col-md-offset-1">
+            <br/>
+            <h1>Alphanumeric Recognition using PyTorch and Flask <small>deployed on Jetson Nano</small></h1>
+            <p>
+                Draw an alphabet or a digit in the left box.
+                The predicition and its probability will be shown in the the right box.
+            </p>
+            </br>
 
-  <div class="content1">
-        drag and drop here
-      <form id="myform" action = "/predict" method = "POST"
-          enctype = "multipart/form-data">
-      <input type = "file" name = "file" />
-    </form>
-  </div>
+            <div class="content1">
+                drag and drop here
+                <form id="myform" action="/predict" method="POST"
+                      enctype="multipart/form-data">
+                    <input type="file" name="file"/>
+                </form>
+            </div>
 
-  <div class="content2">
-        output image here
-  </div>
+            <div class="content2">
+                output image here
+            </div>
 
-</div>
+        </div>
 
-<div class="container" style="height: 8rem; position: relative; padding : 50px">
+        <div class="container" style="height: 8rem; position: relative; padding : 50px">
   <span class="toast doc" style="position: absolute;">
-    This web page made by yunsujeon | &copy; 2021 | <a href="https://github.com/yunsujeon/MLserving_ServiceContextUnderstanding"> Github Page</a>
+    This web page made by yunsujeon | &copy; 2021 | <a
+          href="https://github.com/yunsujeon/MLserving_ServiceContextUnderstanding"> Github Page</a>
   </span>
-</div>
+        </div>
 
-<script src ="../static/index.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="//d3js.org/d3.v5.min.js"></script>
+        <script src="../static/index.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="//d3js.org/d3.v5.min.js"></script>
     </div>
 
-</body>
+    </body>
 </div>

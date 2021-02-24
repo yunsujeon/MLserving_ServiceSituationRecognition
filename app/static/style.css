@@ -22,12 +22,14 @@
     background-color: darkgray;
 }
 
-#input1 {
+#myform{
+    display: inline-block;
     vertical-align: top;
-}
-
-#output1 {
-    vertical-align : top;
+    text-align: center;
+    transition: all .15s ease-in-out;
+    width: 500px;
+    height: 300px;
+    background-color: darkgray;
 }
 
 #predictdigit {
