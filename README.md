@@ -15,9 +15,9 @@ git clone https://github.com/yunsujeon/MLserving_ServiceSituationRecognition.git
 
 2. Download model
 locate at **app/**   
-  [model_best.pth.tar](https://drive.google.com/file/d/12DVhwEKFxxtowHBRpNMQSxpMo4Bc-0Jg/view?usp=sharing)
+  [model_best.pth.tar](https://drive.google.com/file/d/12DVhwEKFxxtowHBRpNMQSxpMo4Bc-0Jg/view?usp=sharing)   
 locate at **app/output_crf_v1/**   
-  [best.model](https://drive.google.com/file/d/128rO633ev0XoTCZ56OoECEm0YobMid1K/view?usp=sharing)
+  [best.model](https://drive.google.com/file/d/128rO633ev0XoTCZ56OoECEm0YobMid1K/view?usp=sharing)   
 
 ---
 
@@ -58,7 +58,6 @@ docker build -t <image name> .
 docker run -i -t --rm -p 8888:8888 -v <your path>:/<docker path> --shm-size=2GB --gpus all <image name>
 ex)
 docker run -i -t --rm -p 8888:8888 -v /home/intern/MLserving/app:/app --shm-size=2GB --gpus all <image name>
-
 ```
 If you need more memory in docker env, and select specific gpus ..
 --shm-size=8G
