@@ -23,9 +23,9 @@ def home():
 @app.route('/predict', methods=['GET', 'POST'])
 def predict():
     request.files['image'].save("./keeponeimage/one.png")  # 항상 같은이름으로 저장
-    subprocess.run(["python", "online_demo_imgcv.py"])  # 현 폴더에 있는 사진 전부를 가져가서 추론한다. 하나만 존재하도록 관리할것
+    subprocess.run(["python3", "online_demo_imgcv.py"])  # 현 폴더에 있는 사진 전부를 가져가서 추론한다. 하나만 존재하도록 관리할것
 
-    filename = './result.png'
+    filename = 'result.png'
     return send_file(filename, mimetype='image/png')
 
 

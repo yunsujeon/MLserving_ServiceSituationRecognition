@@ -1,7 +1,6 @@
 # PyTorch and Torchvision installed from source for Jetson-Nano
 # Please comment torch & torchvision when working on Jetson-Nano
 
-# 개발환경 RTX3090이여서 torch 1.7 사용. 이외에는 1.3.0 이상이면 될 것
 --find-links https://download.pytorch.org/whl/torch_stable.html
 torch==1.7.0
 --find-links https://download.pytorch.org/whl/torch_stable.html
@@ -9,7 +8,8 @@ torchvision==0.8.1
 flask
 numpy
 Pillow
-opencv-python
+opencv-python==3.4.2.16
+opencv-contrib-python==3.4.2.16
 imageio
 argparse
 imageio
