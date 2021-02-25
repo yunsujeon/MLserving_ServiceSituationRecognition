@@ -1,3 +1,7 @@
+
+[model_best.pth.tar](https://drive.google.com/file/d/12DVhwEKFxxtowHBRpNMQSxpMo4Bc-0Jg/view?usp=sharing)
+[best.model](https://drive.google.com/file/d/128rO633ev0XoTCZ56OoECEm0YobMid1K/view?usp=sharing)
+
 # Train and Deploy Machine Learning Model With Web Interface - Docker, PyTorch & Flask
 
 Live access (deployed on GCP): https://ml-app.imadelhanafi.com
