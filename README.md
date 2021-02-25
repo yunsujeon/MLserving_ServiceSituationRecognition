@@ -14,11 +14,12 @@ git clone https://github.com/yunsujeon/MLserving_ServiceSituationRecognition.git
 ```
 
 2. Download model
-locate at app/
+locate at **app/**   
   [model_best.pth.tar](https://drive.google.com/file/d/12DVhwEKFxxtowHBRpNMQSxpMo4Bc-0Jg/view?usp=sharing)
-locate at app/output_crf_v1/
+locate at **app/output_crf_v1/**   
   [best.model](https://drive.google.com/file/d/128rO633ev0XoTCZ56OoECEm0YobMid1K/view?usp=sharing)
 
+---
 
 ## Running on Local machine with Anaconda
 
@@ -39,6 +40,7 @@ python app.py
 ```
 Go to http://0.0.0.0:8888 , then you can see wep page and explanation.
 
+---
 
 ## Running on Docker
 
@@ -64,11 +66,14 @@ If you need more memory in docker env, and select specific gpus ..
 
 Go to http://0.0.0.0:8888, then you can see wep page and explanation.
 
+---
+
 ## Improvement
 
 You can run this codes at SSH server, Its all same this repo's local, docker examples
 
-But you will change the access url
-0.0.0:8888 -> [your remote server ip]:8888
+But you will change the access url   
+**0.0.0:8888** -> **[your remote server ip]:8888**   
+ex) 129.777.44.22:8888
 
 Enjoy this Repo. thank you.
