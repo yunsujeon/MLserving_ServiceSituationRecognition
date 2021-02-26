@@ -165,7 +165,7 @@ async function uploadFiles(e) {
     e.dataTransfer = e.originalEvent.dataTransfer;
     var files = e.target.files || e.dataTransfer.files;
     if (files.length > 1) {
-        alert('하나만 올려라.');
+        alert('just one image.');
         return;
     }
     if (files[0].type.match(/image.*/)) {
@@ -193,7 +193,7 @@ async function uploadFiles(e) {
             "background-size": "100% 100%"
         });
     } else {
-        alert('이미지가 아닙니다.');
+        alert('not an image.');
         return;
     }
 }

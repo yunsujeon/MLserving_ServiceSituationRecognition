@@ -8,7 +8,8 @@ RUN apt-get update \
     && apt-get install -yq --no-install-recommends \
     python3.6.2 \
     python3-pip \
-    libgtk2.0-dev
+    libgtk2.0-dev \
+    cuda-11-1
     
 # RUN pip3 install --upgrade pip==9.0.3 \
 RUN pip3 install --upgrade pip==21.0.1 \
