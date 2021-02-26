@@ -6,6 +6,9 @@ Situation Recognition
 <img src="./flask2.gif" width="900px" height="506px"></img><br/>
 
 ---
+## Required Software
+https://github.com/imadelh/ML-web-app
+https://github.com/aai4r/aai4r-Situation-Recognition
 
 ## Install
 1. Clone the Repo
