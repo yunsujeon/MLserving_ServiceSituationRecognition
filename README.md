@@ -71,6 +71,8 @@ Go to http://0.0.0.0:8888, then you can see wep page and explanation.
 
 You can run this codes at SSH server, Its all same this repo's local, docker examples
 
+**You have to match CUDA version to SSH server. So you have to change Dockerfile**
+
 But you will change the access url   
 **0.0.0:8888** -> **[your remote server ip]:8888**   
 ex) 129.777.44.22:8888
