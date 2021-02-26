@@ -3,7 +3,7 @@
 
 Situation Recognition
 
-    <img src="./flask2.gif" width="900px" height="506px"></img><br/>
+<img src="./flask2.gif" width="900px" height="506px"></img><br/>
 
 ---
 
